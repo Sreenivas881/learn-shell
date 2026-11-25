@@ -23,7 +23,6 @@ validate() {
     fi
 }
 
-echo "Proceeding..." | tee -a "$logs_file"
 
 dnf install nginx -y &>> "$logs_file"
 validate $? "Nginx Installation"
