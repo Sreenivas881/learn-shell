@@ -23,6 +23,6 @@ dnf install nginx -y
 validate $? "Nginx Installation"
 
 dnf  install mariadb-client-utils -y
-validate $? "MariaDB Client Installation""
+validate $? "MariaDB Client Installation"
 
 echo "Proceeded..."
