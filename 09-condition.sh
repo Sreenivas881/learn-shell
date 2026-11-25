@@ -17,5 +17,5 @@ else
       echo "Distinction
 fi
 
-echo end
+echo "End"
 
