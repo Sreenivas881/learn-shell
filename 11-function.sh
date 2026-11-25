@@ -22,7 +22,7 @@ echo "Proceeding..."
 dnf install nginx -y
 validate $? "Nginx Installation"
 
-dnf install mysql -y
-validate $? "MySQL Installation"
+dnf dnf install mariadb-client-utils -y
+validate $? "validate $? "MariaDB Client Installation""
 
 echo "Proceeded..."
