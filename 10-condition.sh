@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 user_id=$(id -u)
@@ -8,16 +7,20 @@ if [ "$user_id" -ne 0 ]; then
     exit 1
 fi
 
-echo "Proceeding..."
+validate(){
+    if [ $1 -ne 0 ]; then
+       echo "${2}..FAILED"
+       exit 1
+    else
+    echo "${2}.. SUCCESS"
+    fi
+}
 
+echo "Proceeding..."
+dnf install nginx -y
+validate $? "Nginx Installation"
 
 dnf install mysql -y
-
-if [ $? -ne 0 ]; then
-    echo "MySQL client installation failed"
-    exit 1
-else
-    echo "MySQL client installation succeeded"
-fi
-
+validate $? "Mysql installation failed"
+    
 echo "Proceeded..."
