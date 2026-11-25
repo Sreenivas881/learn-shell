@@ -7,9 +7,8 @@ if [ $user_id -ne 0 ]; then
    exit 1
 fi
 
-echo "Proceeding.."
-dnf install nginxxx -y
+echo "Proceeding..."
+dnf install nginx -y
 
-dnf install mysqlll -y
 
-echo "Proceeded.."
+echo "Proceeded..."
