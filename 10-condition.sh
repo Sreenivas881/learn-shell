@@ -12,4 +12,4 @@ dnf install nginxxx -y
 
 dnf install mysqlll -y
 
-echo "Proceeded .."
+echo "Proceeded.."
