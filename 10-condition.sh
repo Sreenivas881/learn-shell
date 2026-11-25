@@ -20,10 +20,10 @@ fi
 dnf install mysql -y
 
 if [ $? -ne 0 ]; then
-   echo "mysql client installation is failed"
+   echo "MYSQL client installation is failed"
    exit 1
 else
-   echo "mysql client installation is success"
+   echo "MYSQL client installation is success"
 
 
 echo "Proceeded..."
