@@ -9,7 +9,7 @@ if [ "$user_id" -ne 0 ]; then
     exit 1
 fi
 
-mkdir -p $log_folder
+mkdir -p "$log_folder"
 
 echo "Script started executing at $(date +"%F %T")"
 
@@ -24,10 +24,10 @@ validate() {
 
 echo "Proceeding..."
 
-dnf install nginx -y  &>> $logs_file
+dnf install nginx -y  &>> "$logs_file"
 validate $? "Nginx Installation"
 
-dnf  install mariadb-client-utils -y &>> $logs_file
+dnf  install mariadb-client-utils -y &>> "$logs_file"
 validate $? "MariaDB Client Installation"
 
 echo "Script  execution completed at $(date +"%F %T")"
